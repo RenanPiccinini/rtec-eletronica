@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RTEC Eletrônica | Assistência Técnica Especializada em Hardware</title>
+  <meta name="description" content="Assistência técnica especializada em reparo nível componente de Placas-Mãe, Placas de Vídeo (GPU) e Notebooks em Caucaia e Fortaleza - CE. Laboratório de alta precisão.">
+  <meta name="keywords" content="RTEC Eletrônica, conserto placa mãe, reparo placa de vídeo, assistência técnica notebook Caucaia, reballing BGA, eletrônica avançada Fortaleza, conserto GPU">
+  <meta property="og:title" content="RTEC Eletrônica | Especialistas em Placas-Mãe, Placas de Vídeo e Notebooks">
+  <meta property="og:description" content="Laboratório de alta precisão para reparo em bancada. Diagnóstico avançado, reballing e garantia comprovada.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-about.png">
+  <link rel="icon" type="image/png" href="assets/service-gpu.png">
+
+  <!-- Google Fonts: Orbitron, Rajdhani, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Three.js Interactive 3D Canvas Background -->
+  <canvas id="bg-3d-canvas"></canvas>
+
+  <!-- Cybernetic Grid & Ambient Lighting Layers (Parallax) -->
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-blue"></div>
+  <div class="ambient-glow glow-purple"></div>
+  <div class="cyber-grid-overlay"></div>
+  <div class="scanlines"></div>
+
+  <!-- HUD Top Header / Navigation -->
+  <header class="hud-navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-brand">
+        <div class="brand-logo-hex">
+          <span class="hex-text">R</span>
+          <div class="hex-border"></div>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">RTEC <span class="neon-cyan">ELETRÔNICA</span></span>
+          <span class="brand-tagline">ASSISTÊNCIA TÉCNICA ESPECIALIZADA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#simulador" class="nav-link">Diagnóstico 3D</a>
+        <a href="#laboratorio" class="nav-link">Laboratório</a>
+        <a href="#depoimentos" class="nav-link">Diferenciais</a>
+        <a href="#localizacao" class="nav-link">Onde Estamos</a>
+      </nav>
+
+      <!-- Nav Action CTAs -->
+      <div class="nav-actions">
+        <!-- Audio Cyber FX Toggle -->
+        <button id="sfx-toggle" class="btn-icon" title="Efeitos Sonoros Cyber (Clique para alternar)" aria-label="Som Cyber">
+          <svg class="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+          <svg class="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+
+        <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20equipamento" target="_blank" rel="noopener noreferrer" class="btn-hud-whatsapp">
+          <span class="live-status-dot"></span>
+          <span class="btn-text">WhatsApp (85) 99658-5319</span>
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION with 3D Stage & Interactive Parallax Elements -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="cyber-badge" data-parallax="0.05">
+            <span class="badge-pulse"></span>
+            <span class="badge-code">SYS://STATUS: ATENDIMENTO ONLINE</span>
+            <span class="badge-sep">•</span>
+            <span>CAUCAIA - CE</span>
+          </div>
+
+          <h1 class="hero-title" data-parallax="0.08">
+            Engenharia & Precisão para <span class="text-gradient">Ressuscitar</span> o seu Hardware
+          </h1>
+
+          <p class="hero-subtitle" data-parallax="0.04">
+            A <strong>RTEC Eletrônica</strong> é uma assistência técnica de bancada especializada em reparos complexos a nível de componente em <strong>Placas-Mãe</strong>, <strong>Placas de Vídeo (GPUs)</strong> e <strong>Notebooks</strong>. Tecnologia de ponta, agilidade e garantia com quem entende do assunto.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20t%C3%A9cnico%20da%20RTEC%20Eletr%C3%B4nica" target="_blank" rel="noopener noreferrer" class="btn-primary-neon">
+              <span class="btn-glimmer"></span>
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Solicitar Orçamento Agora</span>
+            </a>
+
+            <a href="#simulador" class="btn-secondary-cyber">
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Simulador de Diagnóstico</span>
+            </a>
+          </div>
+
+          <!-- Feature Bullets -->
+          <div class="hero-features-list">
+            <div class="feat-item">
+              <span class="feat-icon">⚡</span>
+              <span>Laboratório Nível Componente</span>
+            </div>
+            <div class="feat-item">
+              <span class="feat-icon">🛡️</span>
+              <span>90 Dias de Garantia</span>
+            </div>
+            <div class="feat-item">
+              <span class="feat-icon">🔍</span>
+              <span>Diagnóstico Rápido & Preciso</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Holographic Card Interactive Stage -->
+        <div class="hero-3d-stage">
+          <div class="card-3d-wrapper" id="heroCard3d">
+            <div class="card-3d-inner">
+              <div class="card-glass-panel">
+                <div class="panel-header-hud">
+                  <div class="hud-circuit-line"></div>
+                  <span class="hud-status"><span class="blink-dot"></span> BENCH_V4.2 // ONLINE</span>
+                </div>
+                
+                <div class="card-image-container">
+                  <img src="assets/hero-flyer.png" alt="RTEC Eletrônica Bancada Especializada" class="card-core-img">
+                  <div class="card-cyber-shine"></div>
+                  <div class="card-hologram-glow"></div>
+                </div>
+
+                <div class="panel-footer-hud">
+                  <div class="footer-meta">
+                    <span class="meta-label">ESPECIALIDADE</span>
+                    <span class="meta-val">REBALLING • SMD • BIOS</span>
+                  </div>
+                  <div class="footer-meta">
+                    <span class="meta-label">ATENDIMENTO</span>
+                    <span class="meta-val">CAUCAIA & FORTALEZA</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating 3D Micro-widgets (Parallax layers) -->
+              <div class="floating-hologram-badge" data-tilt-depth="40">
+                <img src="assets/hologram-chip.jpg" alt="Processador Holográfico 3D" class="chip-avatar">
+                <div class="badge-text">
+                  <strong>MICRO-SOLDA SMD/BGA</strong>
+                  <span>Tecnologia de Bancada</span>
+                </div>
+              </div>
+
+              <div class="floating-stat-badge" data-tilt-depth="60">
+                <div class="stat-circle">98%</div>
+                <div class="stat-info">
+                  <strong>Sucesso de Recuperação</strong>
+                  <span>Placas sem sinal reparadas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE STATS STRIP -->
+    <section class="stats-strip">
+      <div class="container stats-container">
+        <div class="stat-card" data-tilt>
+          <div class="stat-num" data-target="2500">+2.500</div>
+          <div class="stat-label">Equipamentos Recuperados</div>
+          <div class="stat-detail">Notebooks, GPUs e Placas</div>
+        </div>
+        <div class="stat-card" data-tilt>
+          <div class="stat-num" data-target="98">98%</div>
+          <div class="stat-label">Índice de Eficiência</div>
+          <div class="stat-detail">Diagnóstico minucioso em bancada</div>
+        </div>
+        <div class="stat-card" data-tilt>
+          <div class="stat-num">90 Dias</div>
+          <div class="stat-label">Garantia por Escrito</div>
+          <div class="stat-detail">Segurança total no seu reparo</div>
+        </div>
+        <div class="stat-card" data-tilt>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Atendimento Personalizado</div>
+          <div class="stat-detail">Direto com o especialista técnico</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES SECTION with 3D Parallax Tilt Cards -->
+    <section class="section-services" id="servicos">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="tech-tag">ENGENHARIA ELETRÔNICA AVANÇADA</div>
+          <h2 class="section-title">Nossos Serviços Especializados</h2>
+          <p class="section-desc">
+            Recuperamos seu hardware onde outras assistências condenam a troca completa. Tecnologia, microscopia e peças de alta qualidade.
+          </p>
+        </div>
+
+        <!-- 3 Primary Featured Hardware Cards (with Original Workshop Photos) -->
+        <div class="services-3d-grid">
+
+          <!-- Card 1: Placa Mãe -->
+          <div class="service-card-3d" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-badge-cat">DESKTOPS & SERVIDORES</div>
+              <div class="service-img-wrapper">
+                <img src="assets/service-motherboard.png" alt="Conserto de Placa Mãe Desktop RTEC" class="service-photo">
+                <div class="service-corner-decor"></div>
+              </div>
+              <div class="service-body">
+                <h3 class="service-title">Conserto de Placa-Mãe</h3>
+                <p class="service-text">
+                  Diagnóstico e reparo de problemas elétricos, substituição de capacitores e chips SMD, reballing, regravação e atualização de BIOS, eliminação de curtos nas linhas de alimentação primária e secundária.
+                </p>
+                <ul class="service-specs">
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reparo em linhas 19V, 12V, 5V, 3.3V e VCore</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Gravação e recuperação de chip BIOS (SPI)</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Desoxidação química ultrassônica</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reballing de Chipset e Socket</li>
+                </ul>
+                <div class="service-footer">
+                  <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Conserto%20de%20Placa-M%C3%A3e" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                    <span>Orçar Placa-Mãe</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Placa de Vídeo -->
+          <div class="service-card-3d featured-gpu" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-badge-cat hot-badge">GAMER & WORKSTATION</div>
+              <div class="service-img-wrapper">
+                <img src="assets/service-gpu.png" alt="Conserto de Placa de Vídeo GPU RTEC" class="service-photo">
+                <div class="service-corner-decor"></div>
+              </div>
+              <div class="service-body">
+                <h3 class="service-title">Conserto de Placa de Vídeo (GPU)</h3>
+                <p class="service-text">
+                  Reparo de artefatos visuais, tela preta sem vídeo, substituição de memórias VRAM com reballing, troca de dissipadores e fans, repastagem com thermal paste e thermal pads de alta condutividade térmica e otimização de clock/tensão.
+                </p>
+                <ul class="service-specs">
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Eliminação de artefatos visuais e crashes</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reballing de GPU e substituição de VRAM GDDR6/5</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reparo do circuito regulador VRM / MOSFETs</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Testes de estresse FurMark e 3DMark</li>
+                </ul>
+                <div class="service-footer">
+                  <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Conserto%20de%20Placa%20de%20V%C3%ADdeo%20(GPU)" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                    <span>Orçar Placa de Vídeo</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Notebooks -->
+          <div class="service-card-3d" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-badge-cat">NOTEBOOKS & GAMERS</div>
+              <div class="service-img-wrapper">
+                <img src="assets/service-laptop.png" alt="Conserto de Notebook RTEC" class="service-photo">
+                <div class="service-corner-decor"></div>
+              </div>
+              <div class="service-body">
+                <h3 class="service-title">Conserto de Notebook</h3>
+                <p class="service-text">
+                  Reparo completo de hardware e software, recuperação de placas-mãe em curto, substituição de telas e conectores Jack, restauração de carcaças e dobradiças quebradas, upgrades de SSD NVMe e limpeza preventiva profunda.
+                </p>
+                <ul class="service-specs">
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reparo na placa-mãe (Notebook não liga ou desliga)</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reconstrução estrutural de dobradiças e carcaça</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Troca de telas LED/IPS, teclados e baterias</li>
+                  <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Upgrades de performance (SSD M.2 e RAM)</li>
+                </ul>
+                <div class="service-footer">
+                  <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Conserto%20de%20Notebook" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                    <span>Orçar Notebook</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Secondary Services Grid -->
+        <div class="secondary-services-grid">
+          <div class="sec-service-card" data-tilt>
+            <div class="sec-icon">🔬</div>
+            <h4>Serviço de Reparação</h4>
+            <p>Análise aprofundada com osciloscópio digital e injeção de corrente para encontrar curtos ocultos.</p>
+            <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20Repara%C3%A7%C3%A3o" target="_blank" class="sec-link">Solicitar Reparação &rarr;</a>
+          </div>
+
+          <div class="sec-service-card" data-tilt>
+            <div class="sec-icon">❄️</div>
+            <h4>Manutenção Preventiva</h4>
+            <p>Limpeza ultrassônica interna, remoção de poeira e troca térmica de alta condutividade térmica.</p>
+            <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20Manuten%C3%A7%C3%A3o" target="_blank" class="sec-link">Solicitar Manutenção &rarr;</a>
+          </div>
+
+          <div class="sec-service-card" data-tilt>
+            <div class="sec-icon">⚡</div>
+            <h4>Formatação & Otimização</h4>
+            <p>Instalação limpa com drivers oficiais atualizados, remoção de gargalos e ajustes para máximo FPS.</p>
+            <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20Formata%C3%A7%C3%A3o" target="_blank" class="sec-link">Solicitar Formatação &rarr;</a>
+          </div>
+
+          <div class="sec-service-card" data-tilt>
+            <div class="sec-icon">💾</div>
+            <h4>Backup & Recuperação</h4>
+            <p>Cópia de segurança protegida de seus arquivos e recuperação de dados em dispositivos com falhas.</p>
+            <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20Backup" target="_blank" class="sec-link">Solicitar Backup &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3D DIAGNOSTIC SIMULATOR SECTION -->
+    <section class="section-simulator" id="simulador">
+      <div class="container">
+        <div class="simulator-wrapper">
+          <div class="simulator-header">
+            <div class="tech-tag">DIAGNÓSTICO INTERATIVO RTEC</div>
+            <h2 class="section-title">Descubra o Reparo Provável do seu Aparelho</h2>
+            <p class="section-desc">
+              Selecione o tipo de equipamento e o defeito apresentado para obter uma triagem técnica preliminar imediata e enviar direto ao especialista.
+            </p>
+          </div>
+
+          <div class="simulator-card-glass">
+            <div class="sim-steps-indicator">
+              <div class="sim-step-dot active" id="dot1">1. Equipamento</div>
+              <div class="sim-step-line"></div>
+              <div class="sim-step-dot" id="dot2">2. Sintoma</div>
+              <div class="sim-step-line"></div>
+              <div class="sim-step-dot" id="dot3">3. Diagnóstico</div>
+            </div>
+
+            <!-- Step 1: Equipment Selection -->
+            <div class="sim-stage active" id="simStage1">
+              <h3 class="sim-question">Qual equipamento precisa de reparo?</h3>
+              <div class="sim-options-grid">
+                <button type="button" class="sim-btn-option" data-equip="Notebook Gamer ou Convencional">
+                  <span class="opt-icon">💻</span>
+                  <span class="opt-title">Notebook</span>
+                  <span class="opt-sub">Gamer, Corporativo ou Ultrabook</span>
+                </button>
+
+                <button type="button" class="sim-btn-option" data-equip="Placa de Vídeo (GPU)">
+                  <span class="opt-icon">🎮</span>
+                  <span class="opt-title">Placa de Vídeo (GPU)</span>
+                  <span class="opt-sub">NVIDIA GeForce / AMD Radeon</span>
+                </button>
+
+                <button type="button" class="sim-btn-option" data-equip="Placa-Mãe de Desktop">
+                  <span class="opt-icon">🖲️</span>
+                  <span class="opt-title">Placa-Mãe Desktop</span>
+                  <span class="opt-sub">Intel / AMD para PCs Gamer</span>
+                </button>
+
+                <button type="button" class="sim-btn-option" data-equip="PC Desktop Completo ou Outro">
+                  <span class="opt-icon">🖥️</span>
+                  <span class="opt-title">PC Completo / Bancada</span>
+                  <span class="opt-sub">Montagem, fonte ou diagnóstico geral</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Symptom Selection -->
+            <div class="sim-stage" id="simStage2">
+              <div class="stage-back-nav">
+                <button type="button" class="btn-back" id="btnBackTo1">&larr; Voltar</button>
+                <span class="selected-equip-pill" id="selectedEquipPill">Notebook</span>
+              </div>
+              <h3 class="sim-question">Qual é o principal sintoma apresentado?</h3>
+              <div class="sim-options-grid" id="symptomsContainer">
+                <!-- Dynamically populated or static options -->
+                <button type="button" class="sim-btn-symptom" data-symptom="Não liga nada / Sem nenhum sinal de vida">
+                  <span class="opt-icon">⚡</span>
+                  <span class="opt-title">Não liga nada / Morto</span>
+                  <span class="opt-sub">Sem LED, sem ventoinha girando</span>
+                </button>
+
+                <button type="button" class="sim-btn-symptom" data-symptom="Liga mas não dá vídeo / Tela preta">
+                  <span class="opt-icon">📺</span>
+                  <span class="opt-title">Liga mas sem imagem</span>
+                  <span class="opt-sub">LEDs acendem, cooler gira, tela preta</span>
+                </button>
+
+                <button type="button" class="sim-btn-symptom" data-symptom="Artefatos na tela / Linhas e riscos coloridos">
+                  <span class="opt-icon">🌈</span>
+                  <span class="opt-title">Artefatos / Falha gráfica</span>
+                  <span class="opt-sub">Travamento em jogos, riscos na tela</span>
+                </button>
+
+                <button type="button" class="sim-btn-symptom" data-symptom="Superaquecimento extremo / Desliga sozinho">
+                  <span class="opt-icon">🔥</span>
+                  <span class="opt-title">Superaquecendo / Desliga</span>
+                  <span class="opt-sub">Cooler em 100%, desliga sob carga</span>
+                </button>
+
+                <button type="button" class="sim-btn-symptom" data-symptom="Contato com líquido ou curto aparente">
+                  <span class="opt-icon">💧</span>
+                  <span class="opt-title">Caiu líquido / Curto elétrico</span>
+                  <span class="opt-sub">Derrubou água, café ou cheiro de queimado</span>
+                </button>
+
+                <button type="button" class="sim-btn-symptom" data-symptom="Carcaça ou dobradiça quebrada / Danificado">
+                  <span class="opt-icon">🔧</span>
+                  <span class="opt-title">Dobradiça ou tela quebrada</span>
+                  <span class="opt-sub">Dificuldade para abrir ou estalos</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Result & WhatsApp Dispatch -->
+            <div class="sim-stage" id="simStage3">
+              <div class="result-hud-card">
+                <div class="result-header">
+                  <div class="tech-tag tag-success">TRIAGEM DE LABORATÓRIO GERADA</div>
+                  <h4 class="result-device" id="resultDeviceTitle">Equipamento: Notebook</h4>
+                </div>
+
+                <div class="result-body-grid">
+                  <div class="result-detail-box">
+                    <span class="detail-label">DEFEITO INFORMADO:</span>
+                    <strong class="detail-val" id="resultSymptomVal">Não liga nada / Sem nenhum sinal</strong>
+                  </div>
+
+                  <div class="result-detail-box highlight">
+                    <span class="detail-label">PROCEDIMENTO PROVÁVEL RTEC:</span>
+                    <p class="detail-desc" id="resultProcedure">
+                      Análise de tensão primária (19V / 3.3V / 5V), teste de MOSFETs de entrada com fonte assimétrica e verificação de curto em linha secundária. Reparo a nível componente sem necessidade de troca da placa inteira.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="result-action-panel">
+                  <p class="panel-hint">
+                    Deseja enviar essa triagem para o técnico no WhatsApp para agilizar seu atendimento?
+                  </p>
+                  <div class="result-btns">
+                    <a href="#" id="btnSendWhatsappSim" target="_blank" rel="noopener noreferrer" class="btn-primary-neon">
+                      <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon-svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                      <span>Conversar no WhatsApp com essa Triagem</span>
+                    </a>
+                    <button type="button" class="btn-restart" id="btnRestartSim">Refazer Simulação</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LABORATORY & TECHNOLOGY SHOWCASE (Parallax Depth) -->
+    <section class="section-laboratory" id="laboratorio">
+      <div class="container">
+        <div class="lab-layout-grid">
+          <div class="lab-info" data-parallax="0.05">
+            <div class="tech-tag">TECNOLOGIA & INFRAESTRUTURA</div>
+            <h2 class="section-title">Laboratório Equipado para Reparos Críticos</h2>
+            <p class="lab-description">
+              A <strong>RTEC Eletrônica</strong> não terceiriza reparos. Nosso espaço conta com bancadas completas para micro-solda, osciloscópios de alta precisão, fontes assimétricas para injeção de corrente controlada e estação de retrabalho BGA.
+            </p>
+
+            <div class="lab-highlights-grid">
+              <div class="highlight-item">
+                <div class="hi-icon">🔬</div>
+                <div class="hi-text">
+                  <strong>Microscopia Óptica</strong>
+                  <span>Inspeção minuciosa de trilhas rompidas, micro-fissuras e soldas frias.</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="hi-icon">🌡️</div>
+                <div class="hi-text">
+                  <strong>Retrabalho BGA Controlado</strong>
+                  <span>Perfil térmico preciso para não danificar o substrato do chip nem as camadas da placa.</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="hi-icon">📊</div>
+                <div class="hi-text">
+                  <strong>Testes com Carga Real</strong>
+                  <span>Equipamentos liberados somente após horas de estresse térmico e benchmark rigoroso.</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="hi-icon">🛡️</div>
+                <div class="hi-text">
+                  <strong>Proteção ESD Total</strong>
+                  <span>Mantas anti-estáticas, pulseiras aterradas e cuidados extremos com descargas eletrostáticas.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-visual" data-parallax="0.1">
+            <div class="lab-frame-3d" data-tilt>
+              <img src="assets/lab-workbench.jpg" alt="Laboratório de Tecnologia RTEC Eletrônica" class="lab-img">
+              <div class="lab-glare"></div>
+              
+              <!-- Hotspots on Workbench Image -->
+              <div class="interactive-hotspot spot-1" title="Estação de Retrabalho BGA">
+                <span class="spot-ping"></span>
+                <span class="spot-point">1</span>
+                <div class="spot-tooltip">Estação de Micro-Solda & BGA</div>
+              </div>
+
+              <div class="interactive-hotspot spot-2" title="Inspeção Digital">
+                <span class="spot-ping"></span>
+                <span class="spot-point">2</span>
+                <div class="spot-tooltip">Microscopia Eletrônica</div>
+              </div>
+
+              <div class="interactive-hotspot spot-3" title="Testes de Placa de Vídeo">
+                <span class="spot-ping"></span>
+                <span class="spot-point">3</span>
+                <div class="spot-tooltip">Bancada de Teste GPU</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP-BY-STEP WORKFLOW TIMELINE -->
+    <section class="section-workflow" id="como-funciona">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="tech-tag">PROCESSO TRANSPARENTE</div>
+          <h2 class="section-title">Como Funciona o Nosso Atendimento</h2>
+          <p class="section-desc">Passo a passo simples, ágil e com total comunicação em cada etapa do seu reparo.</p>
+        </div>
+
+        <div class="timeline-cyber">
+          <div class="timeline-step" data-tilt>
+            <div class="step-num">01</div>
+            <div class="step-card">
+              <h4>Entrega ou Envio</h4>
+              <p>Traga seu equipamento à nossa sede em Caucaia ou combine a entrega. Emitimos a ordem de serviço na hora.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step" data-tilt>
+            <div class="step-num">02</div>
+            <div class="step-card">
+              <h4>Triagem em Bancada</h4>
+              <p>Testes minuciosos com fonte assimétrica, osciloscópio e inspeção visual para localizar a causa raiz.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step" data-tilt>
+            <div class="step-num">03</div>
+            <div class="step-card">
+              <h4>Orçamento Transparente</h4>
+              <p>Você recebe o laudo detalhado e o valor do conserto sem compromisso e sem taxas surpresas.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step" data-tilt>
+            <div class="step-num">04</div>
+            <div class="step-card">
+              <h4>Execução & Validação</h4>
+              <p>Realizamos a micro-solda, substituição de peças, estresse de bancada e entregamos com 90 dias de garantia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & CONTACT SECTION -->
+    <section class="section-location" id="localizacao">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="tech-tag">ONDE ESTAMOS</div>
+          <h2 class="section-title">Visite Nossa Sede ou Envie Seu Equipamento</h2>
+          <p class="section-desc">Localização estratégica em Caucaia - Ceará, atendendo toda a região metropolitana e Fortaleza.</p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Contact & Address Card -->
+          <div class="location-info-card" data-tilt>
+            <div class="loc-card-header">
+              <div class="loc-icon-pin">📍</div>
+              <div>
+                <h3>RTEC Eletrônica</h3>
+                <span class="loc-sub">Assistência Técnica Especializada</span>
+              </div>
+            </div>
+
+            <div class="loc-details">
+              <div class="loc-item">
+                <span class="loc-item-icon">🏢</span>
+                <div>
+                  <strong>Endereço Completo:</strong>
+                  <p>Rua José Alves de Oliveira, 9 - Mestre Antonio, Caucaia - CE, CEP: 61623-470</p>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <span class="loc-item-icon">📱</span>
+                <div>
+                  <strong>WhatsApp & Telefone:</strong>
+                  <p><a href="https://wa.me/5585996585319" target="_blank" class="loc-link">(85) 99658-5319</a></p>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <span class="loc-item-icon">📸</span>
+                <div>
+                  <strong>Instagram Oficial:</strong>
+                  <p><a href="https://www.instagram.com/rtec_eletronica/" target="_blank" class="loc-link">@rtec_eletronica</a></p>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <span class="loc-item-icon">🛍️</span>
+                <div>
+                  <strong>Catálogo Online:</strong>
+                  <p><a href="https://rteceletronica.lojazap.com" target="_blank" class="loc-link">rteceletronica.lojazap.com</a></p>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <span class="loc-item-icon">⏰</span>
+                <div>
+                  <strong>Horário de Atendimento:</strong>
+                  <p>Segunda a Sexta: 08:00 às 18:00<br>Sábado: 08:00 às 13:00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="loc-actions-group">
+              <a href="https://maps.google.com/?q=R.+Jos%C3%A9+Alves+de+Oliveira,+9+-+Mestre+Antonio,+Caucaia+-+CE,+61623-470" target="_blank" rel="noopener noreferrer" class="btn-primary-neon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-svg"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span>Abrir no Google Maps</span>
+              </a>
+
+              <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20fa%C3%A7o%20para%20levar%20meu%20equipamento%20na%20loja" target="_blank" rel="noopener noreferrer" class="btn-secondary-cyber">
+                <span>Chamar no WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Map Container with Original Map & Google Embed -->
+          <div class="location-map-wrapper" data-tilt>
+            <div class="map-hud-header">
+              <span class="map-coord">GPS: -3.7319, -38.6531 // CAUCAIA-CE</span>
+              <span class="map-chip-tag">MAPA INTERATIVO</span>
+            </div>
+            
+            <div class="map-embed-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.42848906354!2d-38.65529062414736!3d-3.7319082962420956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c330fef6a7f%3A0xb5b73673f848d73b!2sR.%20Jos%C3%A9%20Alves%20de%20Oliveira%2C%209%20-%20Curicaca%2C%20Caucaia%20-%20CE%2C%2061623-470!5e0!3m2!1spt-BR!2sbr!4v1718000000000!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização RTEC Eletrônica Caucaia">
+              </iframe>
+            </div>
+
+            <div class="map-hud-footer">
+              <img src="assets/location-map.png" alt="RTEC Mapa Referência" class="map-thumb-reference">
+              <div class="map-thumb-caption">
+                <strong>Ponto de Referência:</strong> Próximo à Av. Ananias Alexandre e Curicaca / Mestre Antônio.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="section-cta-banner">
+      <div class="container">
+        <div class="cta-banner-box">
+          <div class="cta-banner-content">
+            <div class="tech-tag">FALE CONOSCO HOJE MESMO</div>
+            <h2 class="cta-banner-title">Seu computador ou placa parou? Não perca seu investimento.</h2>
+            <p class="cta-banner-desc">
+              Entre em contato agora com a equipe técnica da RTEC Eletrônica e faça um pré-diagnóstico sem compromisso.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20meu%20aparelho" target="_blank" rel="noopener noreferrer" class="btn-primary-neon btn-large">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon-svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Falar no WhatsApp (85) 99658-5319</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="hud-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="nav-brand">
+          <div class="brand-logo-hex">
+            <span class="hex-text">R</span>
+            <div class="hex-border"></div>
+          </div>
+          <div class="brand-info">
+            <span class="brand-title">RTEC <span class="neon-cyan">ELETRÔNICA</span></span>
+            <span class="brand-tagline">ASSISTÊNCIA TÉCNICA ESPECIALIZADA</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Excelência em manutenção e recuperação eletrônica de hardware gamer, corporativo e pessoal. Agilidade, confiabilidade e respeito ao seu patrimônio tecnológico.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Serviços Principais</h5>
+        <ul class="footer-links">
+          <li><a href="#servicos">Conserto de Placa-Mãe</a></li>
+          <li><a href="#servicos">Conserto de Placa de Vídeo (GPU)</a></li>
+          <li><a href="#servicos">Conserto e Reparo de Notebook</a></li>
+          <li><a href="#servicos">Reballing e Solda BGA</a></li>
+          <li><a href="#servicos">Troca Térmica e Preventiva</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Links Rápidos</h5>
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#simulador">Simulador de Diagnóstico 3D</a></li>
+          <li><a href="#laboratorio">Nosso Laboratório</a></li>
+          <li><a href="#localizacao">Como Chegar</a></li>
+          <li><a href="https://rteceletronica.lojazap.com" target="_blank">Loja & Catálogo Virtual</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Atendimento & Redes</h5>
+        <div class="footer-contact-items">
+          <div class="f-contact-item">
+            <span>WhatsApp:</span>
+            <a href="https://wa.me/5585996585319" target="_blank">(85) 99658-5319</a>
+          </div>
+          <div class="f-contact-item">
+            <span>Instagram:</span>
+            <a href="https://www.instagram.com/rtec_eletronica/" target="_blank">@rtec_eletronica</a>
+          </div>
+          <div class="f-contact-item">
+            <span>Local:</span>
+            <span>Caucaia, CE - Brasil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 RTEC Eletrônica. Todos os direitos reservados.</p>
+        <p class="built-with">Engenharia, Alta Tecnologia e Precisão em Eletrônica.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING PERSISTENT WHATSAPP BUTTON (PULSING 3D GLOW) -->
+  <a href="https://wa.me/5585996585319?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20t%C3%A9cnico%20da%20RTEC%20Eletr%C3%B4nica" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" id="floatingWhatsapp" aria-label="Atendimento Rápido via WhatsApp">
+    <div class="wa-tooltip">
+      <span class="wa-status-beacon"></span>
+      <span>Fale com o Técnico Online</span>
+    </div>
+    <div class="wa-icon-sphere">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </div>
+    <div class="wa-ripple-ring ring-1"></div>
+    <div class="wa-ripple-ring ring-2"></div>
+  </a>
+
+  <!-- Vendor Three.js (Offline Fallback + CDN) -->
+  <script src="assets/vendor/three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- Custom Scripts -->
+  <script src="three-scene.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
