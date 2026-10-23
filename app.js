@@ -341,8 +341,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (resultSymptomVal) resultSymptomVal.textContent = symptom;
 
     let procedureText = '';
+    const isMacBook = equip.toLowerCase().includes('macbook') || equip.toLowerCase().includes('apple');
 
-    if (symptom.includes('Não liga nada')) {
+    if (isMacBook) {
+      if (symptom.includes('Não liga nada')) {
+        procedureText = `Para ${equip}: Análise técnica avançada da placa lógica (Logic Board) sob microscópio óptico. Mapeamento de linhas principais (PPBUS_G3H, PP3V3_G3H e PMIC). Teste de negociação USB-C (5V a 20V) e substituição de chips de carga (CD3217/ISL9240) ou eliminação de curtos em capacitores SMD, recuperando a placa lógica original sem necessidade de substituição completa.`;
+      } else if (symptom.includes('sem imagem') || symptom.includes('Tela preta')) {
+        procedureText = `Para ${equip}: Diagnóstico do circuito de backlight (retroiluminação) e sinal de vídeo EDP. Verificação do fusível de backlight, diodo elevador, circuito do sensor de ângulo da tampa (hall sensor) e reparo de cabo flexível ou circuito integrado multiplexador de vídeo no padrão Apple.`;
+      } else if (symptom.includes('líquido') || symptom.includes('Curto')) {
+        procedureText = `Para ${equip} (Urgência Apple - Desoxidação): Banho químico em cuba ultrassônica industrial para estancar corrosão galvânica em componentes BGA. Reconstrução de trilhas microscópicas da Logic Board com fio de cobre esmaltado, preservando memória SSD integrada e os dados do cliente.`;
+      } else if (symptom.includes('Superaquecimento') || symptom.includes('Desliga')) {
+        procedureText = `Para ${equip}: Manutenção térmica de precisão unibody. Higienização das ventoinhas e dutos de exaustão, aplicação de pasta térmica de alta condutividade e verificação de sensores térmicos SMC/T2/PMU (para solucionar travamento de kernel_task a 100%).`;
+      } else if (symptom.includes('Dobradiça') || symptom.includes('quebrada')) {
+        procedureText = `Para ${equip}: Ajuste e alinhamento mecânico do mecanismo de articulação unibody em alumínio, substituição de parafusos de retenção e reparo estrutural preservando a integridade da carcaça original.`;
+      } else {
+        procedureText = `Para ${equip}: Triagem minuciosa em bancada Apple com osciloscópio, medição de ripple e diagnóstico minucioso da Logic Board e periféricos.`;
+      }
+    } else if (symptom.includes('Não liga nada')) {
       procedureText = `Para ${equip}: Realização de teste com fonte assimétrica para mapear fuga de corrente em miliamperes. Inspeção microscópica nos circuitos de entrada (PWM primário, MOSFETs de alta/baixa e capacitores cerâmicos SMD). Recuperação a nível componente preservando a placa original.`;
     } else if (symptom.includes('Artefatos') || symptom.includes('riscos')) {
       procedureText = `Para ${equip}: Diagnóstico de falha no circuito gráfico (GPU) ou memórias VRAM. Teste com software de diagnóstico MODS/MATS para identificar o chip de memória específico com defeito. Troca de VRAM ou reballing do chip gráfico com esferas Lead-Free e testes de estabilidade 3D.`;

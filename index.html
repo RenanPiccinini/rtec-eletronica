@@ -366,29 +366,65 @@
             <!-- Step 1: Equipment Selection -->
             <div class="sim-stage active" id="simStage1">
               <h3 class="sim-question">Qual equipamento precisa de reparo?</h3>
-              <div class="sim-options-grid">
+              <div class="sim-options-grid sim-equip-grid">
                 <button type="button" class="sim-btn-option" data-equip="Notebook Gamer ou Convencional">
-                  <span class="opt-icon">💻</span>
-                  <span class="opt-title">Notebook</span>
-                  <span class="opt-sub">Gamer, Corporativo ou Ultrabook</span>
+                  <div class="opt-img-wrapper">
+                    <img src="assets/simulator/notebook.jpg" alt="Notebook Gamer ou Ultrabook" class="opt-photo" loading="lazy">
+                    <div class="opt-img-overlay"></div>
+                    <span class="opt-badge">Gamer / Ultra</span>
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-title">Notebook</span>
+                    <span class="opt-sub">Gamer, Corporativo ou Ultrabook</span>
+                  </div>
+                </button>
+
+                <button type="button" class="sim-btn-option" data-equip="Apple MacBook (Pro / Air)">
+                  <div class="opt-img-wrapper">
+                    <img src="assets/simulator/macbook.jpg" alt="Apple MacBook Pro e Air" class="opt-photo" loading="lazy">
+                    <div class="opt-img-overlay"></div>
+                    <span class="opt-badge">Apple</span>
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-title">MacBook</span>
+                    <span class="opt-sub">Pro, Air, M1/M2/M3/M4 ou Intel</span>
+                  </div>
                 </button>
 
                 <button type="button" class="sim-btn-option" data-equip="Placa de Vídeo (GPU)">
-                  <span class="opt-icon">🎮</span>
-                  <span class="opt-title">Placa de Vídeo (GPU)</span>
-                  <span class="opt-sub">NVIDIA GeForce / AMD Radeon</span>
+                  <div class="opt-img-wrapper">
+                    <img src="assets/simulator/gpu.jpg" alt="Placa de Vídeo GPU" class="opt-photo" loading="lazy">
+                    <div class="opt-img-overlay"></div>
+                    <span class="opt-badge">NVIDIA / AMD</span>
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-title">Placa de Vídeo (GPU)</span>
+                    <span class="opt-sub">NVIDIA GeForce / AMD Radeon</span>
+                  </div>
                 </button>
 
                 <button type="button" class="sim-btn-option" data-equip="Placa-Mãe de Desktop">
-                  <span class="opt-icon">🖲️</span>
-                  <span class="opt-title">Placa-Mãe Desktop</span>
-                  <span class="opt-sub">Intel / AMD para PCs Gamer</span>
+                  <div class="opt-img-wrapper">
+                    <img src="assets/simulator/motherboard.jpg" alt="Placa-Mãe Desktop" class="opt-photo" loading="lazy">
+                    <div class="opt-img-overlay"></div>
+                    <span class="opt-badge">Intel / AMD</span>
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-title">Placa-Mãe Desktop</span>
+                    <span class="opt-sub">Intel / AMD para PCs Gamer</span>
+                  </div>
                 </button>
 
                 <button type="button" class="sim-btn-option" data-equip="PC Desktop Completo ou Outro">
-                  <span class="opt-icon">🖥️</span>
-                  <span class="opt-title">PC Completo / Bancada</span>
-                  <span class="opt-sub">Montagem, fonte ou diagnóstico geral</span>
+                  <div class="opt-img-wrapper">
+                    <img src="assets/simulator/desktop.jpg" alt="PC Completo Desktop Gamer" class="opt-photo" loading="lazy">
+                    <div class="opt-img-overlay"></div>
+                    <span class="opt-badge">Setup Gamer</span>
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-title">PC Completo / Bancada</span>
+                    <span class="opt-sub">Montagem, fonte ou diagnóstico geral</span>
+                  </div>
                 </button>
               </div>
             </div>
