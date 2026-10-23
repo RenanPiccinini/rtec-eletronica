@@ -888,8 +888,8 @@ main {
 
 .services-3d-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   margin-bottom: 3.5rem;
 }
 
@@ -2155,10 +2155,11 @@ main {
   }
 
   .services-3d-grid {
-    grid-template-columns: 1fr;
-    max-width: 550px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 840px;
     margin-left: auto;
     margin-right: auto;
+    gap: 1.5rem;
   }
 
   .secondary-services-grid {
@@ -2230,6 +2231,10 @@ main {
   }
 
   .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-3d-grid {
     grid-template-columns: 1fr;
   }
 
