@@ -54,7 +54,9 @@ rtec-eletronica/
 ├── .gitignore                  # Arquivos ignorados pelo Git
 └── assets/
     ├── vendor/three.min.js     # Three.js local
+    ├── imagem_com_mac.png      # Flyer institucional RTEC com MacBook
     ├── hero-flyer.png          # Flyer institucional RTEC
+    ├── service-macbook.jpg     # Conserto de MacBook
     ├── service-motherboard.png # Conserto de Placa-Mãe
     ├── service-gpu.png         # Conserto de Placa de Vídeo
     ├── service-laptop.png      # Conserto de Notebook
